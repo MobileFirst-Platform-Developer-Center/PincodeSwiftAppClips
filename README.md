@@ -1,30 +1,29 @@
-IBM MobileFirst Platform Foundation
-===
-## PinCodeSwift
-A sample application demonstrating use of the CredentialsValidation Security Check.
+# IBM MobileFirst Platform Foundation
 
-### Tutorials
-https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/authentication-and-security/credentials-validation/
+## PinCodeSwiftAppClip
+
+A sample application demonstrating use of the CredentialsValidation Security Check along with AppClips feature.
 
 ### Usage
 
 1. Use either Maven, MobileFirst CLI or your IDE of choice to [build and deploy the available `ResourceAdapter` and `PinCodeAttempts` adapters](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/adapters/creating-adapters/).
 
- The PinCodeAttempts Security Check adapter can be found in https://github.com/MobileFirst-Platform-Developer-Center/SecurityCheckAdapters/tree/release80.
+The PinCodeAttempts Security Check adapter can be found in https://github.com/MobileFirst-Platform-Developer-Center/SecurityCheckAdapters/tree/release80.
 
-2. From a command-line window, navigate to the project's root folder and run the commands:
- - `pod update` followed by `pod install` - to add the MobileFirst SDK.
- - `mfpdev app register` - to register the application.
- - `mfpdev app push` - to map the `accessRestricted` scope to the `PinCodeAttempts` security check.
+2. Add the MobileFirst SDK to the AppClip Target.
 
-3. Run the application in the iOS Simulator or physical device. Press the **Get Balance** button and enter "1234" to display the balance.
+3. From the command line run the command `mfpdev app register` - to register the application.
 
-> **Tip:** you can update the bundled SDK by running the command `pod update` from the project's root folder.
+4. Add the `accessRestricted` scope for the App.
+
+5. Run the application in the iOS 14 Simulator or physical device. Press the **Get Balance** button
 
 ### Supported Levels
+
 IBM MobileFirst Platform Foundation 8.0
 
 ### License
+
 Copyright 2016 IBM Corp.
 
 Licensed under the Apache License, Version 2.0 (the "License");
