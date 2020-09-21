@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="A7E-vJ-43f">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="C0o-L1-OlZ">
+            <objects>
+                <navigationController id="A7E-vJ-43f" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GPb-4j-WyK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8LI-YK-lwr" kind="relationship" relationship="rootViewController" id="08q-Cu-YlY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UpU-by-ISj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-131" y="251"/>
+        </scene>
+        <!--Pin Code-->
+        <scene sceneID="Xth-uV-tpv">
+            <objects>
+                <viewController title="Pin Code" id="8LI-YK-lwr" customClass="ViewController" customModule="PinCodeSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="asC-tF-s44"/>
+                        <viewControllerLayoutGuide type="bottom" id="RPI-B2-GUg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vz1-eV-Mwb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBA-oC-Lly">
+                                <rect key="frame" x="20" y="72" width="83" height="30"/>
+                                <state key="normal" title="Get Balance"/>
+                                <connections>
+                                    <action selector="getBalance:" destination="8LI-YK-lwr" eventType="touchUpInside" id="O23-t6-SzJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-gI-KQd">
+                                <rect key="frame" x="20" y="110" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="45s-Zz-FCT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xaF-gI-KQd" firstAttribute="top" secondItem="qBA-oC-Lly" secondAttribute="bottom" constant="8" symbolic="YES" id="GEM-AY-sah"/>
+                            <constraint firstItem="qBA-oC-Lly" firstAttribute="top" secondItem="asC-tF-s44" secondAttribute="bottom" constant="8" id="USY-0k-e2T"/>
+                            <constraint firstItem="xaF-gI-KQd" firstAttribute="leading" secondItem="qBA-oC-Lly" secondAttribute="leading" id="eSy-dZ-a2R"/>
+                            <constraint firstItem="xaF-gI-KQd" firstAttribute="trailing" secondItem="Vz1-eV-Mwb" secondAttribute="trailingMargin" id="gEO-8d-VeS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qBA-oC-Lly" secondAttribute="leading" id="pnJ-gr-nLG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PIN Code" id="ipR-1g-Cof"/>
+                    <connections>
+                        <outlet property="balanceLabel" destination="xaF-gI-KQd" id="xnm-t3-odV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBI-v8-mLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669" y="251"/>
+        </scene>
+    </scenes>
+</document>
